@@ -32,10 +32,10 @@ export default Navbar;
 const Conteiner = styled.div`
 h2{
     font weight: 400;
-    font weight:bold
+    font weight: bold;
 }
 padding:.4rem;
-background-color:#333;
+background-color: black;
 display:flex;
 align-items:center;
 justify-content:space-between;
