@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import CartWidget from "./CartWidget/CartWidget";
 function Navbar() {
+  const onAdd = (valor) => {
+    console.log(`Compra ${valor} cantidad`);
+  };
   return (
     <>
       <Conteiner>
@@ -19,7 +22,7 @@ function Navbar() {
             </li>
             <li>
               <a href="#">
-                <CartWidget />
+                <CartWidget initial={1} productos={10} onAdd={onAdd} />
               </a>
             </li>
           </ul>
