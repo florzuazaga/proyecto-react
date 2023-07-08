@@ -3,7 +3,7 @@ import Titulo from "../Titulo";
 export const ItemlistContainer = () => {
   return (
     <>
-      <Titulo />
+      <Titulo greeting="bienvenido a la tienda" />
     </>
   );
 };

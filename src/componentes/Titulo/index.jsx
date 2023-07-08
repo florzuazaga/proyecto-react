@@ -1,8 +1,9 @@
 import React from "react";
-export const Titulo = () => {
+export const Titulo = (props) => {
+  console.log(props);
   return (
     <>
-      <h1>Tienda</h1>
+      <h1>{props.greeting}</h1>
     </>
   );
 };
