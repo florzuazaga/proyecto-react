@@ -1,11 +1,20 @@
 import "./item.css";
 import React from "react";
-const Item = ({ info }) => {
+import { Button, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
+const Item = ({ prod }) => {
   return (
-    <a href="" className="film">
-      <img src={info.image} alt="" />
-      <p>{info.title}</p>
-    </a>
+    <Card style={{ width: "10rem" }}>
+      <Card.Img variant="top" src={prod.img} />
+      <Card-Body>
+        <Card.Title>{prod.name}</Card.Title>
+        <Card.Text>{prod.description}</Card.Text>
+        <Card.Text>${prod.price}</Card.Text>
+        <Button as={Link} to={`/Item/${prod.id}`} variant="primary">
+          Detalle
+        </Button>
+      </Card-Body>
+    </Card>
   );
 };
 export default Item;
