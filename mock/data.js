@@ -10,10 +10,13 @@ export const getProducts = () => {
     }, 2000);
   });
 };
-export const getItem = () => {
+export const getItem = (id) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(list);
+      resolve(
+        list,
+        find((item) => item.id === id)
+      );
     }, 2000);
   });
 };
