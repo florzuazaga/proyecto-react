@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { getItem } from "../mock/data";
-import ItemDetail from "../ItemDetail/ItemDetail";
-import { useParams } from "react-router-dom";
-const ItemDetailContainer = () => {
-  const [producto, setProducto] = useState({});
-  const { id } = useParams();
-  console.log(id);
+
+import ItemDetail from "../ItemDetail";
+const films = {
+  id: 1,
+  image: "./public/img/descarga.jpg",
+  title: "sarten",
+};
+export const ItemDetailContainer = () => {
+  const [data, setData] = useState({});
   useEffect(() => {
-    getItem(id)
-      .then((res) => setProducto(res))
-      .catch((error) => console.log(error));
-  }, []);
+    getData = new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(films);
+      }, 3000);
+    });
+    getData.then((res) => setData(res));
+  });
+
   return (
     <div>
-      <ItemDetail producto={producto} />
+      <ItemDetail data={data} />
     </div>
   );
 };
