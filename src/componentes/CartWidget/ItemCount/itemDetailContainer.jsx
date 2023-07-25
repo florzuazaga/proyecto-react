@@ -14,7 +14,6 @@ export const ItemDetailContainer = () => {
         resolve(films);
       }, 3000);
     });
-    getData.then((res) => setData(res));
   });
 
   return (
