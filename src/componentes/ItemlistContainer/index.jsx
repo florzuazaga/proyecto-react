@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import itemList from "../CartWidget/itemList";
+import ItemList from "../CartWidget/ItemList";
 import Titulo from "../Titulo";
 
 export const ItemlistContainer = ({ texto }) => {
@@ -11,7 +11,7 @@ export const ItemlistContainer = ({ texto }) => {
   return (
     <>
       <Titulo grreting={texto} />
-      <itemList data={data} />
+      <ItemList data={data} />
     </>
   );
 };
