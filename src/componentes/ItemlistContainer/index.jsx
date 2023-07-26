@@ -5,6 +5,8 @@ import { getData } from "../../Data/producto";
 
 export const ItemlistContainer = ({ texto }) => {
   const [data, setData] = useState([]);
+  console.log(data);
+
   useEffect(() => {
     getData.then((res) => setData(res));
   }, []);

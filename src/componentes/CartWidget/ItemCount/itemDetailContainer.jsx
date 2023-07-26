@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail";
 const films = {
   id: 1,
+  price: $5000,
   image: "./public/img/descarga.jpg",
   title: "sarten",
 };
