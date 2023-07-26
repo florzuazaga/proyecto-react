@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ItemList from "../CartWidget/ItemList";
+import ItemList from "../CartWidget/ItemList/ItemList";
 import Titulo from "../Titulo";
 import { getData } from "../../Data/producto";
 
@@ -14,7 +14,7 @@ export const ItemlistContainer = ({ texto }) => {
   return (
     <>
       <Titulo grreting={texto} />
-      <ItemList data={data} />
+      {data.length == 0 ? <h1>Cargando</h1> : <ItemList data={data} />}
     </>
   );
 };

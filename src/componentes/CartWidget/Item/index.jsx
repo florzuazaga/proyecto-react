@@ -2,15 +2,14 @@ import "./item.css";
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-const Item = ({ films }) => {
-  console.log(films);
+const Item = ({ info }) => {
   return (
     <Card style={{ width: "10rem" }}>
-      <Card.Img variant="top" src={films.image} />
+      <Card.Img variant="top" src={info.image} />
       <Card-Body>
-        <Card.Text>{films.title}</Card.Text>
-        <Card.Text>${films.price}</Card.Text>
-        <Button as={Link} to={`/Item/${films.id}`} variant="primary">
+        <Card.Text>{info.title}</Card.Text>
+        <Card.Text>${info.price}</Card.Text>
+        <Button as={Link} to={`/Item/${info.id}`} variant="primary">
           Detalle
         </Button>
       </Card-Body>
