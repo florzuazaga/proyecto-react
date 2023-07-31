@@ -1,21 +1,36 @@
 import React, { useEffect, useState } from "react";
 
 import ItemDetail from "../ItemDetail";
-const films = {
-  id: 1,
-  price: $5000,
-  image: "./public/img/descarga.jpg",
-  title: "sarten",
-};
+const films = [
+  {
+    id: 1,
+    price: 5000,
+    image: "https://i.postimg.cc/D0bpFXyj/descarga.jpg",
+    title: "sarten",
+  },
+  {
+    id: 2,
+    price: 70000,
+    image: "https://i.postimg.cc/J0WYrhDR/images.jpg",
+    title: "cacerola cuadrada",
+  },
+  {
+    id: 3,
+    price: 80000,
+    image: "https://i.postimg.cc/4N7BhVGB/Cacerola-28-Cherry.png",
+    title: "cacerola 28cm",
+  },
+];
 export const ItemDetailContainer = () => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
   useEffect(() => {
-    getData = new Promise((resolve) => {
+    const getData = new Promise((resolve) => {
       setTimeout(() => {
         resolve(films);
       }, 3000);
     });
-  });
+    getData.then((res) => setData(res));
+  }, []);
 
   return (
     <div>
