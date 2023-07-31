@@ -2,19 +2,19 @@ const films = [
   {
     id: 1,
     price: 50000,
-    image: "../img/descarga.jpg",
+    image: "https://i.postimg.cc/D0bpFXyj/descarga.jpg",
     title: "sarten",
   },
   {
     id: 2,
     price: 70000,
-    image: "../img/imagenes.jpg",
+    image: "https://i.postimg.cc/J0WYrhDR/images.jpg",
     title: "cacerola cuadrada",
   },
   {
     id: 3,
     price: 80000,
-    image: "../img/Cacerola_28_Cherry.png",
+    image: "https://i.postimg.cc/4N7BhVGB/Cacerola-28-Cherry.png",
     title: "cacerola 28cm",
   },
 ];
