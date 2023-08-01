@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import ItemDetail from "../ItemDetail";
+import ItemList from "../ItemList/ItemList";
 const films = [
   {
     id: 1,
@@ -34,7 +35,7 @@ export const ItemDetailContainer = () => {
 
   return (
     <div>
-      <ItemDetail data={data} />
+      <ItemList data={data} />
     </div>
   );
 };

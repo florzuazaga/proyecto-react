@@ -1,6 +1,6 @@
 import React from "react";
 
 const ItemCount = () => {
-  return;
+  return <h1>Detalle</h1>;
 };
 export default ItemCount;
