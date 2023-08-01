@@ -13,7 +13,7 @@ function Navbar() {
         <div>
           <ul>
             <li>
-              <NavLink to="/Item/:id">Home</NavLink>
+              <NavLink to="/item/:id">Home</NavLink>
             </li>
             <li>
               <NavLink to="/catalogo">Catalogo</NavLink>
