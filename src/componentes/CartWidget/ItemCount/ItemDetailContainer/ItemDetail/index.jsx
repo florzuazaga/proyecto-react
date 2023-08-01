@@ -1,6 +1,6 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
-import CartWidget from "../CartWidget/CartWidget";
+import CartWidget from "../../../../Titulo/CartWidget";
 export const ItemDetail = (data) => {
   const onAdd = (quantity) => {
     console.log(`compraste ${quantity} unidades`);

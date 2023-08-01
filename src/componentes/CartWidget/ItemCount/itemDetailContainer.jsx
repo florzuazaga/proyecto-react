@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import ItemDetail from "../ItemDetail";
-import ItemList from "../ItemList/ItemList";
+import ItemList from "../../ItemlistContainer/ItemList/ItemList";
 const films = [
   {
     id: 1,

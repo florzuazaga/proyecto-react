@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ItemList from "../CartWidget/ItemList/ItemList";
+import ItemList from "./ItemList/ItemList";
 import Titulo from "../Titulo";
 import { getData } from "../../Data/producto";
 
