@@ -1,5 +1,6 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
+import CartWidget from "../CartWidget/CartWidget";
 export const ItemDetail = (data) => {
   const onAdd = (quantity) => {
     console.log(`compraste ${quantity} unidades`);
@@ -10,7 +11,7 @@ export const ItemDetail = (data) => {
         <img className="datail_image" src="{data.image}" alt="" />
         <div className="content">
           <h1>{data.titulo}</h1>
-          <ItemCount initial={3} stock={5} onAdd={onAdd} />
+          <CartWidget initial={3} stock={5} onAdd={onAdd} />
         </div>
       </div>
     </div>

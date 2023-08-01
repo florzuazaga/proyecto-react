@@ -23,3 +23,10 @@ export const getData = new Promise((resolve) => {
     resolve(films);
   }, 3000);
 });
+export const getItem = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve[1];
+    }, 2000);
+  });
+};

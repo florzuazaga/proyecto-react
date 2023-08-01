@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import CartWidget from "./CartWidget/CartWidget";
+import { NavLink } from "react-router-dom";
 function Navbar() {
   const onAdd = (valor) => {
     console.log(`Compra ${valor} cantidad`);
@@ -12,18 +13,18 @@ function Navbar() {
         <div>
           <ul>
             <li>
-              <a href="./componentes/paginas/Inicio.jsx">Home</a>
+              <NavLink to="/Item/:id">Home</NavLink>
             </li>
             <li>
-              <a href="./componentes/paginas/Catalogo.jsx">Catalogo</a>
+              <NavLink to="/catalogo">Catalogo</NavLink>
             </li>
             <li>
-              <a href="./componentes/paginas/Contacto.jsx">Contacto</a>
+              <NavLink to="/catalogo">Catalogo2</NavLink>
             </li>
             <li>
-              <a href="#">
+              <NavLink>
                 <CartWidget initial={1} productos={10} onAdd={onAdd} />
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
