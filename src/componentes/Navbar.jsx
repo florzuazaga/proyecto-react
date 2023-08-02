@@ -16,13 +16,13 @@ function Navbar() {
               <NavLink to="/item/:id">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/catalogo">Catalogo</NavLink>
+              <NavLink to="/catalogo/pormayor">Catalogo</NavLink>
             </li>
             <li>
-              <NavLink to="/catalogo">Catalogo2</NavLink>
+              <NavLink to="/catalogo/pormenor">Catalogo2</NavLink>
             </li>
             <li>
-              <NavLink>
+              <NavLink to="/cart">
                 <CartWidget />
               </NavLink>
             </li>
