@@ -1,23 +1,22 @@
 import React, { useEffect, useState } from "react";
 
 import ItemDetail from "../ItemDetail";
-import ItemList from "../../ItemlistContainer/ItemList/ItemList";
 
-const films = {
+const film = {
   id: 1,
   price: 5000,
   image: "https://i.postimg.cc/D0bpFXyj/descarga.jpg",
   title: "sarten",
 };
 export const ItemDetailContainer = () => {
-  const [data, setData] = useState({});
+  const [data, SetData] = useState({});
   useEffect(() => {
     const getData = new Promise((resolve) => {
       setTimeout(() => {
-        resolve(films);
+        resolve(film);
       }, 3000);
     });
-    getData.then((res) => setData(res));
+    getData.then((res) => SetData(res));
   }, []);
   return (
     <div>

@@ -1,6 +1,5 @@
 import React from "react";
-import ItemCount from "../ItemCount/ItemCount";
-import CartWidget from "../../../../Titulo/CartWidget";
+
 export const ItemDetail = (data) => {
   return (
     <div className="container">
