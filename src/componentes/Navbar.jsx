@@ -23,7 +23,7 @@ function Navbar() {
             </li>
             <li>
               <NavLink>
-                <CartWidget initial={1} productos={10} onAdd={onAdd} />
+                <CartWidget />
               </NavLink>
             </li>
           </ul>

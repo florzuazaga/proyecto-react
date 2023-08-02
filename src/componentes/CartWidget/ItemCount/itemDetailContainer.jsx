@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import ItemDetail from "../ItemDetail";
+import ItemDetail from "../ItemCount/ItemDetailContainer/ItemDetail/index";
 
 const film = {
   id: 1,
