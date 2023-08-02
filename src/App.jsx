@@ -2,7 +2,7 @@ import "./App.css";
 import Navbar from "./componentes/Navbar";
 import ItemlistContainer from "./componentes/ItemlistContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Item from "./componentes/ItemlistContainer/Item";
+import ItemDetailContainer from "./componentes/itemDetailContainer";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           path="/"
           element={<ItemlistContainer greeting="Bienvenidos" />}
         />
-        <Route path="/item/:id" element={<Item />} />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
         <Route path="/catalogo" element={<ItemlistContainer />} />
       </Routes>
     </BrowserRouter>
