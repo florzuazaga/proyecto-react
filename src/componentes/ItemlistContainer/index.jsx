@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import Titulo from "../Titulo";
-import ItemCount from "../CartWidget/ItemCount/ItemCount";
+
 import { useParams } from "react-router-dom";
 const films = [
   {
@@ -27,9 +27,6 @@ const films = [
   },
 ];
 export const ItemlistContainer = ({ texto }) => {
-  const onAdd = (quantity) => {
-    console.log(`compraste ${quantity} unidades`);
-  };
   const [data, setData] = useState([]);
   const { catalogoId } = useParams();
   useEffect(() => {
@@ -50,7 +47,7 @@ export const ItemlistContainer = ({ texto }) => {
   return (
     <>
       <Titulo grreting={texto} />
-      <ItemCount initial={3} stock={5} onAdd={onAdd} />
+
       <ItemList data={data} />
       {data.length == 0 ? <h1>Cargando</h1> : <ItemList data={data} />}
     </>
