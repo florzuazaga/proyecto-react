@@ -1,12 +1,14 @@
-import React, { useContext } from "react";
-import CartContext from "../../context/CartContext";
+import React from "react";
+import { useCartContext } from "../../context/CartContext";
+import { Badge } from "react-bootstrap";
+import { BsCart4 } from "react-icons/bs";
 
 export const CartWidget = () => {
-  const { cartQuantity } = useContext(CartContext);
+  const { totalProductos } = useCartContext();
   return (
     <div className="d-flex justify-content-around align-items-center">
       <BsCart4 fontSize={"1.5rem"} color="black" />
-      {cartQuantity() > 0 && <Badge bg="danger">{cartQuantity()}</Badge>}
+      {totalProductos() > 0 && <Badge bg="danger">{totalProductos()}</Badge>}
     </div>
   );
 };
