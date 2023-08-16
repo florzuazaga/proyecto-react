@@ -3,7 +3,7 @@ import ItemList from "./ItemList";
 import Titulo from "../Titulo";
 
 import { useParams } from "react-router-dom";
-const films = [
+const ollas = [
   {
     id: 1,
     price: 50000,
@@ -32,12 +32,12 @@ export const ItemlistContainer = ({ texto }) => {
   useEffect(() => {
     const getData = new Promise((resolve) => {
       setTimeout(() => {
-        resolve(films);
+        resolve(ollas);
       }, 3000);
     });
     if (catalogoId) {
       getData.then((res) =>
-        setData(res.filter((film) => film.category === catalogoId))
+        setData(res.filter((olla) => olla.category === catalogoId))
       );
     } else {
       getData.then((res) => setData(res));

@@ -1,4 +1,4 @@
-const films = [
+const ollas = [
   {
     id: 1,
     price: 50000,
@@ -20,7 +20,7 @@ const films = [
 ];
 export const getData = new Promise((resolve) => {
   setTimeout(() => {
-    resolve(films);
+    resolve(ollas);
   }, 3000);
 });
 export const getItem = () => {

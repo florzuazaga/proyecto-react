@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import ItemDetail from "../ItemCount/ItemDetailContainer/ItemDetail/index";
 import { useParams } from "react-router-dom";
 
-const films = [
+const ollas = [
   {
     id: 1,
     price: 5000,
@@ -32,11 +32,11 @@ export const ItemDetailContainer = () => {
   useEffect(() => {
     const getData = new Promise((resolve) => {
       setTimeout(() => {
-        resolve(films);
+        resolve(ollas);
       }, 3000);
     });
     getData.then((res) =>
-      SetData(res.find((film) => film.id === parseInt(id)))
+      SetData(res.find((olla) => olla.id === parseInt(id)))
     );
   }, []);
   return (
