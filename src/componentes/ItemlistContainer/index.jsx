@@ -14,12 +14,12 @@ export const ItemlistContainer = ({ texto }) => {
   const [data, setData] = useState([]);
   const { catalogoId } = useParams();
   useEffect(() => {
-    const querydb = getFirestore();
-    const queryCollection = collection(querydb, "productos");
+    const consultadb = getFirestore();
+    const consultaCollection = collection(consultadb, "productos");
 
     if (catalogoId) {
       const queryFiltro = query(
-        queryCollection,
+        consultaCollection,
         where("category", "==", catalogoId)
       );
       getDocs(queryFiltro).then((res) =>
@@ -28,7 +28,7 @@ export const ItemlistContainer = ({ texto }) => {
         )
       );
     } else {
-      getDocs(queryCollection).then((res) =>
+      getDocs(consultaCollection).then((res) =>
         setData(
           res.docs.map((producto) => ({ id: producto.id, ...producto.data() }))
         )
