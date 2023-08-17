@@ -8,7 +8,7 @@ export const ItemDetailContainer = () => {
   const { id } = useParams();
   useEffect(() => {
     const consultadb = getFirestore();
-    const consultaDoc = doc(consultadb, "productos", "2q85IOAoHFNCMJeL5SoB");
+    const consultaDoc = doc(consultadb, "productos", id);
     getDoc(consultaDoc).then((res) => setData({ id: res.id, ...res.data() }));
   }, []);
   return (
