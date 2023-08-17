@@ -5,7 +5,7 @@ import ItemCart from "../ItemCart/itemCart";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { cart, totalPrice } = useCartContext();
+  const { cart, totalPrecio } = useCartContext();
   const compra = {
     buyer: {
       name: "florencia",
@@ -19,7 +19,7 @@ const Cart = () => {
       price: product.price,
       quantity: product.quantity,
     })),
-    total: totalPrice(),
+    total: totalPrecio(),
   };
   const handleClick = () => {
     const db = getFirestore();
@@ -39,7 +39,7 @@ const Cart = () => {
       {cart.map((product) => (
         <ItemCart key={product.id} product={product} />
       ))}
-      <p>total:{totalPrice()}</p>
+      <p>total:{totalPrecio()}</p>
       <button onClick={handleClick}>compra</button>
     </>
   );

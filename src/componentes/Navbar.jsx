@@ -39,18 +39,18 @@ h2{
     font weight: bold;
 }
 padding:.4rem;
-background-color: black;
+background-color: pink;
 display:flex;
 align-items:center;
 justify-content:space-between;
-color:#fff;
+color:black;
 position:relative;
 float:left;
 ul{
     list-style:none;
 }
 a{
-    color:#fff;
+    color:black;
     text-decoration:none;
     margin-right:1rem;
 }
