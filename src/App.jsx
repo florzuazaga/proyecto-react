@@ -6,6 +6,7 @@ import ItemlistContainer from "./componentes/ItemlistContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from "./componentes/CartWidget/ItemCount/itemDetailContainer";
 import CartProvider from "./context/CartContext";
+import "./firebase/configuracion";
 function App() {
   return (
     <BrowserRouter>
