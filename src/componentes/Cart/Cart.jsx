@@ -3,7 +3,6 @@ import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useCartContext } from "../../context/CartContext";
 import ItemCart from "../ItemCart/itemCart";
 import { Link } from "react-router-dom";
-import { getFirestore } from "firebase/firestore";
 
 const Cart = () => {
   const { cart, totalPrice } = useCartContext();
